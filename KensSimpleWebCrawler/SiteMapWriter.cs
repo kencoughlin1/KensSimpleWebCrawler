@@ -39,6 +39,11 @@ namespace KensSimpleWebCrawler
             {
                 //Write to a file
                 sw.WriteLine("Current Page : " + pageData.Title + "  URL :" + pageData.Url);
+                foreach (var line in pageData.MetadataList)
+                {
+                    sw.WriteLine(line);
+                }
+
                 foreach (var line in pageData.AnchorList)
                 {
                     sw.WriteLine(line);
